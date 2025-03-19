@@ -1,0 +1,240 @@
+body {
+  background-color: rgba(148, 197, 149, 0.3);
+}
+
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lists-container {
+  display: flex;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.list-section {
+  min-width: 300px;
+  flex: 1;
+}
+
+.list-section h2 {
+  font-size: 2.2em;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 15px;
+}
+
+.list-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #94c595;
+  transform: scaleX(1.2);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+.list-section h2:hover::after {
+  transform: scaleX(1.4);
+}
+
+.list-box {
+  border: 1px solid #7b6d8d;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 6px rgba(123, 109, 141, 0.2);
+}
+
+.table {
+  border-collapse: collapse;
+  min-width: 300px;
+  width: 100%;
+}
+
+.table th {
+  text-align: left;
+  padding: 12px 8px;
+  border-bottom: 2px solid #7b6d8d;
+  color: #2c3e50;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.table td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #94c595;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.category-row th {
+  text-align: left;
+  padding: 12px 8px;
+  background-color: #7b6d8d;
+  border-bottom: 1px solid #45503b;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.plant-emoji {
+  font-size: 2em;
+  text-align: center;
+}
+
+.search-form {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(123, 109, 141, 0.2);
+}
+
+.search-input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #7b6d8d;
+  min-width: 200px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #45503b;
+  box-shadow: 0 0 0 2px rgba(69, 80, 59, 0.3);
+  background-color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lists-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .list-section {
+    min-width: 100%;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input {
+    width: 100%;
+  }
+}
+
+/* Hover effects */
+.table tr:hover {
+  background-color: rgba(148, 197, 149, 0.2);
+}
+
+.list-box:hover {
+  box-shadow: 0 6px 12px rgba(123, 109, 141, 0.3);
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-2px);
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+  accent-color: #7b6d8d;
+}
+
+/* Label styling */
+label {
+  color: #2c3e50;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.heart-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 8px;
+  font-size: 2em;
+  transition: all 0.2s ease;
+  color: #7b6d8d;
+  opacity: 0.5;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.heart-button:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+.heart-button.prioritized {
+  color: #e74c3c;
+  opacity: 1;
+}
+
+.heart-button.prioritized:hover {
+  color: #c0392b;
+  opacity: 0.9;
+}
+
+.navbar {
+  background-color: #2c3e50;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: #94c595;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.navbar-links a:hover {
+  background-color: #34495e;
+  color: #94c595;
+}
+
+.navbar-links a.active {
+  color: #94c595;
+  font-weight: 600;
+} 
